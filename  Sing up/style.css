@@ -162,5 +162,14 @@ outline: none;
 	margin-top: -10px;
 	margin-left: 50px;
 }
-
+.designer{
+	width: 150px;
+	height: 20px;
+	float: left;
+	margin-top: -80px;
+	margin-left: 300px;
+	color: #151414b5;
+	font-size: 15px;
+	font-family: Arial, sans-serif;
+}
 
