@@ -1,0 +1,166 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-image: url(images/sunset-3269076_1280.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    width:100%;
+}
+.all-page{
+	width:800px;
+	height: 350px;
+	margin: 110px auto;
+	padding:0px;
+}
+#block {
+	display: block;
+	width: 800px;
+	height: 350px;
+	background-color: black;
+	opacity: 0.8;
+	position: relative;
+	float:left;
+}
+
+#block2 {
+	width: 400px;
+	height: 350px;
+	background: transparent;
+	position: relative;
+	float: left;
+}
+
+#block3 {
+	width: 400px;
+	height: 350px;
+	background: transparent;
+	position: relative;
+	float: left;
+}
+
+#headline {
+	display: block;
+	margin-top: 70px;
+	margin-left: 60px;
+    position: relative;
+}
+
+#text {
+	margin-top: 40px;
+	margin-left: 60px;
+	text-color: white;
+}
+
+h3{
+	font-weight: normal;
+}
+#sign, #sign2 {
+	width: 110px;
+	height: 30px;
+	margin-top: 30px;
+	margin-left: 60px;
+	border-radius: 7px;
+	background: transparent;
+	font-weight: bold;
+	color: #D3D3D3;
+outline: none;
+}
+
+
+h2, h3 {
+	color: #D3D3D3;
+}
+#headline2 {
+	display: block;
+	margin-top: 70px;
+	margin-left: 100px;
+    position: relative;
+}
+
+#text2 {
+	margin-top: 40px;
+	margin-left: 100px;
+}
+
+#sign2 {
+	margin-left: 100px;
+outline: none;
+}
+
+#topblock {
+	display: block;
+	width: 340px;
+	height: 370px;
+	background-color: #F5F5F5;
+	position: absolute;
+	margin-top: -10px;
+	margin-left: 50px;
+	float:left;
+	z-index: 9;
+}
+ 
+ .click {
+ 	transform: translate(45px,0);
+    -webkit-transform: translate(350px,0);
+	-moz-transform: translate(350px,0); /* Для Firefox */
+    -ms-transform: translate(350px,0); /* Для IE */
+    -o-transform: translate(350px,0); /* Для Opera */
+ 	transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+     -o-transition: all 0.3s ease-out;
+ }
+
+ .click2 {
+ 	transform: translate(45px,0);
+	-moz-transform: translate(0,0); /* Для Firefox */
+    -ms-transform: translate(0,0); /* Для IE */
+    -o-transform: translate(0,0); /* Для Opera */
+    -webkit-transform: translate(0,0);
+ 	transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+ }
+
+ #topblock2 {
+ 	display: block;
+ 	margin-top: 50px;
+ 	margin-left: 70px;	
+ 	position: relative;
+ }
+
+h1{
+	color: #ED5051;
+}
+
+#name, #password, #email {
+	width: 200px;
+	height: 30px;
+	border-radius: 7px;
+}
+
+#signup, #login {
+	width: 120px;
+	height: 30px;
+	border-radius: 7px;
+	background-color: #ED5051;
+	margin-left: 80px;
+outline: none;
+}
+
+#topblock3 {
+	display: block;
+	width: 340px;
+	height: 370px;
+	background-color: #F5F5F5;
+	position: absolute;
+	margin-top: -10px;
+	margin-left: 50px;
+}
+
+
