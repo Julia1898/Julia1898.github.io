@@ -1,0 +1,193 @@
+* {
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+    background: url(images/clouds-2329680_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.wraper{
+  display: flex;
+  max-width: 900px;
+  margin: 130px auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+ }
+ .london_weather,.minsk_weather{
+  background-color: #1d1b1b9e;
+  left: 0;
+  height: 300px;
+  border-radius: 20px;
+  flex-basis: 400px;
+  margin: 0px 0px 20px 0px;
+ }
+ .temp,.clauds,.title{
+  float: left;
+  text-align: center;
+  width: 20%;
+  height: 80px;
+ }
+ .temp{
+  padding: 10px;
+  color: #fff;
+  font-size: 58px;
+ }
+ .cel{
+  position: relative;
+  font-size: 30px;
+  top: -20px;
+ }
+ .title{  
+  width: 60%;
+  background: url(images/title.png);
+  background-size: cover;
+  background-position: center;
+ }
+ hr{
+    border: none; 
+    color: #f7e3e342; 
+    background-color: #f7e3e342; 
+    height: 2px;
+ }
+ .icon{
+  width: 70px;
+  height: 70px;
+  margin: -25px auto;
+ }
+ .clauds{
+  color: #fff;
+  font-size: 20px;
+  margin-top:20px;
+ }
+ 
+ .time{
+  height: 120px;
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  color: #fff;
+  font-size: 80px;
+  font-weight: normal;
+  padding-top: 20px;
+ }
+ .minTemp,.maxTemp{
+   width: 10%;
+ }
+ .date{
+  color: #fff;
+  margin-left: 35%;
+ }
+ .humidity,.wind,.temp_min,.temp_max{
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+ }
+ @media screen and (max-width: 550px){
+   .london_weather,.gomel_weather{
+    margin: 30px;
+   }
+   .title{
+    height: 60px;
+    margin-top: 20px;
+   }
+   .temp{
+    font-size: 40px;
+   }
+   .clauds{
+    padding-right: 15px;
+    font-size: 15px;
+   }
+ }
+
+/* Minsk*/
+
+
+
+.tempMinsk,.claudsMinsk,.titleMinsk{
+  float: left;
+  text-align: center;
+  width: 20%;
+  height: 80px;
+ }
+ .tempMinsk{
+  padding: 10px;
+  color: #fff;
+  font-size: 58px;
+ }
+ .celMinsk{
+  position: relative;
+  font-size: 30px;
+  top: -20px;
+ }
+ .titleMinsk{  
+  width: 60%;
+  background: url(images/titleMinsk.png);
+  background-size: cover;
+  background-position: center;
+ }
+ hr{
+    border: none; 
+    color: #f7e3e342; 
+    background-color: #f7e3e342; 
+    height: 2px;
+ }
+ .iconMinsk{
+  width: 70px;
+  height: 70px;
+  margin: -25px auto;
+ }
+ .claudsMinsk{
+  color: #fff;
+  font-size: 20px;
+  margin-top:20px;
+ }
+ 
+ .timeMinsk{
+  height: 120px;
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  color: #fff;
+  font-size: 80px;
+  font-weight: normal;
+  padding-top: 20px;
+ }
+ 
+ .dateMinsk{
+  color: #fff;
+  margin-left: 35%;
+ }
+ .humidityMinsk,.windMinsk,.temp_minMinsk,.temp_maxMinsk{
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+ }
+ @media screen and (max-width: 550px){
+   .london_weather,.minsk_weather{
+    margin: 30px;
+   }
+   .titleMinsk{
+    height: 60px;
+    margin-top: 20px;
+   }
+   .tempMinsk{
+    font-size: 40px;
+   }
+   .claudsMinsk{
+    padding-right: 15px;
+    font-size: 15px;
+   }
+ }
+ 
