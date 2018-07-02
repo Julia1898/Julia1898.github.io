@@ -1,7 +1,7 @@
 window.onload = function (){
        
        
-   var endpoint ='http://api.openweathermap.org/data/2.5/forecast?id=2643743&APPID=9117bf1c0fa1bf432322023751327cc8';
+   var endpoint ='https://api.openweathermap.org/data/2.5/forecast?id=2643743&APPID=9117bf1c0fa1bf432322023751327cc8';
    var weather={};
    fetch(endpoint)
                .then(blob => blob.json())
@@ -74,7 +74,7 @@ window.onload = function (){
 
    //Minsk
 
-    var endpointMinsk ='http://api.openweathermap.org/data/2.5/forecast?id=625144&APPID=9117bf1c0fa1bf432322023751327cc8';
+    var endpointMinsk ='https://api.openweathermap.org/data/2.5/forecast?id=625144&APPID=9117bf1c0fa1bf432322023751327cc8';
    var weatherMinsk ={};
    fetch(endpointMinsk)
                .then(blob => blob.json())
