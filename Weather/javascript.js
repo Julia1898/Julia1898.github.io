@@ -42,7 +42,12 @@ window.onload = function (){
  	  var now = new Date;
  	  min = now.getUTCMinutes();
  	  hour = now.getUTCHours();
- 	  document.querySelector('.time').innerHTML = hour + ':' +min;
+	  if(min < 10){
+ 	     document.querySelector('.time').innerHTML = hour + ': 0'  +min;
+	  }
+	  if(min > 10){
+ 	     document.querySelector('.time').innerHTML = hour + ':' +min;
+	  }
     }
 
     function getDay(){
@@ -114,7 +119,12 @@ window.onload = function (){
  	  var now = new Date;
  	  minMinsk = now.getMinutes();
  	  hourMinsk = now.getHours();
- 	  document.querySelector('.timeMinsk').innerHTML = hourMinsk + ':' +minMinsk;
+	    if(minMinsk < 10){
+ 	      document.querySelector('.timeMinsk').innerHTML = hourMinsk + ': 0' +minMinsk;
+		}
+		if(minMinsk > 10){
+ 	      document.querySelector('.timeMinsk').innerHTML = hourMinsk + ':' +minMinsk;
+		}
     }
 
     function getDayMinsk(){
