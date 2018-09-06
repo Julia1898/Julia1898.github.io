@@ -216,12 +216,14 @@ nav ul li a{
   margin-bottom: 30px;
  }
  .in,.f{
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   background-image: url(../images/in.png);
   background-size: cover;
  }
 .f{
+  width: 20px;
+  height: 20px;
   margin-top: 15px;
   background-image: url(../images/f.png);
 }
@@ -237,7 +239,7 @@ nav ul li a{
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 70px;
-  overflow: hidden;
+  overflow: auto;
 }
 .open{
     animation-duration: 0.6s;
@@ -520,9 +522,8 @@ h3{
    color: #ca9c54;
    font-size: 1.8rem;
   font-family: 'Biryani', sans-serif;
-  padding: 30px 0 15px 0;
+  padding: 20px 0 5px 0;
 }
-
 .skills_content{
   padding-top: 0px;
 }
@@ -912,7 +913,7 @@ figure{
 
 @media screen and (max-width: 900px){
   html{
-    font-size: 45%;
+    font-size: 50%;
   }
   h1{
     padding-top: 50px;
@@ -1088,11 +1089,12 @@ figure{
 
 @media screen and (max-width: 560px){
   html{
-    font-size: 35%;
+    font-size: 45%;
   }
   nav ul{
     width: 30px;
     height: 20px;
+    margin-left: 10px;
   }
   nav ul li a{
     font-size: 7px;
