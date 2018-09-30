@@ -1,0 +1,43 @@
+body{
+    max-width: 1300px;
+    margin: 0 auto;
+    font-family: Oswald,sana-serif;
+    font-size: 14px;
+}
+h2{
+    padding: 30px 100px;
+}
+input,label,button,textarea{
+     display: block;
+     margin-left: 100px;   
+}
+label{
+    font-size: 1.2rem;
+}
+.name{
+    width: 300px;
+    min-height: 30px;
+    margin-bottom: 30px;
+}
+textarea{
+    width: 300px;
+    min-height: 100px;
+    margin-bottom: 30px;
+}
+.out{
+    margin: 30px 100px;
+    display:block;
+    width: 40%;
+}
+.block_comment{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #eee;
+}
+.out_name{
+   font-size:12px;
+   font-weight: bold;
+}
+.out_time{
+    font-size:10px;
+}
