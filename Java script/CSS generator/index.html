@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Слайдер</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="animate.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="javascript.js" ></script>
+<script type="text/javascript" src="wow.min.js"></script>
+<script>
+     new WOW().init();
+</script>
+</head>
+  <body>
+  	<div id= "title">
+         <big>Update CSS Variables <br>with <span id="JS">JS</span></big>
+    </div>
+
+    <div id="changeBlock">
+           <label for="spacing">Spacing: </label>
+           <input type="range" id="spacing" name="spacing" value ="0" max="200">
+           <label for="blur">Blur: </label>
+           <input type="range" id = "blur" name="blur" value ="0" max="25">
+           <label for="color">Base Color: </label><input type="color" class="color"name="color" value ="#812844">
+    </div>
+
+    <div id="block">
+        <img id ="img" src="images/prague-3010407_640.jpg">
+    </div>
+  </body>
+  </html>
