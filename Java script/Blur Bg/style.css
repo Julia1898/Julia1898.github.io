@@ -1,9 +1,0 @@
-html, body, canvas {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  overflow: hidden;
-
-  background: url(images/bg2.png);
-  background-size: cover;
-}
