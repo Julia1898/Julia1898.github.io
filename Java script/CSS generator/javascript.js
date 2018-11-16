@@ -1,23 +1,20 @@
-window.onload = function (){
-       
- document.getElementById('spacing').oninput = cssGeneratorSpace;
- document.getElementById('blur').oninput = cssGeneratorBlur;
- document.querySelector('.color').oninput = cssGeneratorColor;
+document.querySelector('#spacing').oninput = cssGeneratorSpace;
+document.querySelector('#blur').oninput = cssGeneratorBlur;
+document.querySelector('.color').oninput = cssGeneratorColor;
 
- var block = document.getElementById('block');
- var img =document.getElementById('img');
+var block = document.querySelector('#block');
+var img = document.querySelector('#img');
 
- function cssGeneratorSpace () {
- 	block.style.padding = this.value + 'px';
- }
- //--------------------
- function cssGeneratorBlur () {
- 	img.style.webkitFilter = 'blur('+this.value + 'px)';
- }
- //--------------------
- function cssGeneratorColor () {
- 	block.style.background = this.value;
- }
-     
-      
+function cssGeneratorSpace() {
+  block.style.padding = this.value + 'px';
+}
+
+
+function cssGeneratorBlur() {
+  img.style.webkitFilter = 'blur(' + this.value + 'px)';
+}
+
+
+function cssGeneratorColor() {
+  block.style.background = this.value;
 }
