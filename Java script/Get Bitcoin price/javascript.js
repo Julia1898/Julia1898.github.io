@@ -32,12 +32,12 @@ function showPrice(price) {
   document.querySelector('.usd').innerHTML = usd;
   document.querySelector('.bitcoinBlock').innerHTML = '$'+ usd;
   document.querySelector('.gbp').innerHTML = gbr;
-  document.querySelector('.eurBlock').innerHTML = '&euro;'+ gbr;
+  document.querySelector('.eurBlock').innerHTML = '&euro;'+ eur;
   document.querySelector('.eur').innerHTML = eur; 
   document.querySelector('.gbpBlock').innerHTML = '&pound;'+ gbr;
    
-  var difference = new getData(endpointChange);
-  difference.serverRequest(change(bpi));  
+  var differencePersent = new getData(endpointChange);
+  differencePersent.serverRequest(change(bpi));  
 }
 
 
@@ -48,7 +48,7 @@ function change(price) {
 
     return function(changes) {
       var difference =  changes.bpi;
-      difference = difference['2018-11-14'];
+      difference = Object.values(difference)[0].toFixed();
       var usd_change = (usdPrice / difference * 100 - 100).toFixed(2);
       var todayChange = (usdPrice - difference ).toFixed(2);
       
