@@ -35,7 +35,6 @@ body{
 	margin-left: 0;
 	margin-bottom: 0;
 }
-
 .courseToday{
 	width: 620px;
 	height: 110px;
@@ -51,8 +50,7 @@ body{
 .changing{
 	width: 100px;
 	height: 110px;
-	float: left;
-	
+	float: left;	
 }
 #usd,#gbp,#eur{
 	display: flex;
@@ -77,7 +75,6 @@ body{
 	margin-left: 10px;
 	margin-right: 10px;
 }
-
 #usd_change{
 	display: flex;
     position: relative;
