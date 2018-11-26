@@ -3,28 +3,25 @@
  	margin-top: 0;
  	box-sizing: border-box;
  }
- body {
+ body{
  	background: url(images/audience-1850665_1280.jpg) no-repeat;
  	background-size: cover;	
  	opacity: 0.6;
  	width: 100%;
  	height: 100%;
  	position: relative;
+ } 
+ .keys{
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	width: 900px;
+	height: 100px;
+	margin: 300px 200px;
+	position: relative;
+	padding: 0;
  }
- 
- .keys {
-display: flex;
-align-items: center;
-justify-content:center;
-/*border: 2px solid red;*/
-width: 900px;
-height: 100px;
-margin: 300px 200px;
-position: relative;
-padding: 0;
- }
-
- .key {
+ .key{
  	border: 4px solid black;
  	border-radius: 5px;
  	margin:0;
@@ -37,13 +34,11 @@ padding: 0;
  	color: white;
  	background: rgba(0,0,0,0.4);
  }
-
- kbd {
-   display: block;
-   font-size: 40px;
+ kbd{
+    display: block;
+    font-size: 40px;
  }
-
- .sound {
+ .sound{
  	font-size: 10px;
  	color: yellow;
  	text-transform: uppercase;
@@ -51,8 +46,7 @@ padding: 0;
  	margin-top: 1px;
  	display: block;
  }
-
- .playing {
+ .playing{
  	transform: scale(1.1);
  	border-color: #ffc600;
  	box-shadow: 0 0 10px #ffc600;

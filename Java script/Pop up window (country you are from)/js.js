@@ -1,43 +1,49 @@
-window.onload = function (){
+var country = (function() {
 
-function getCountry (){
+    var modal = document.querySelector('.modal'); 
+    var ip;
+    var country_name;
+    var question = document.querySelector('.question');
+    var refuse = document.querySelector('.refuse');
+    var admit = document.querySelector('.admit');
 
-  var modal =  document.querySelector('.modal'); 
-  var ip;
-  var country_name;
+    function getCountry() {
+      if (localStorage.getItem('setCountry') == null) {
+         const endpointIp = 'https://api.ipify.org?format=json';
+            
+         serverRequest(endpointIp, function(data) {
+            ip = data.ip;
+            const endpointCountry = `https://ipapi.co/${ip}/json/`;
+                        	          
+            serverRequest(endpointCountry, function(data){
+                country_name = data.country_name;
+                modal.style.display = 'block';
+                question.innerHTML += `<span class = "question">${country_name}?</span>`;
+                          
+                refuse.onclick = function() {
+                  modal.style.display = 'none';
+                }
 
-      if (localStorage.getItem('setCountry') == null){
-
-          var endpointIp = 'https://api.ipify.org?format=json';
-            fetch(endpointIp)
-                 .then(blob => blob.json())
-                 .then(data => {
-          	          ip = data.ip;
-          	          const endpoint = `https://ipapi.co/${ip}/json/`;
-         
-                  fetch(endpoint)
-                      .then(blob => blob.json())
-                      .then(data => {
-               	           country_name = data.country_name;
-               	    	     modal.style.display = 'block';
-                           
-               	          document.querySelector('.question').innerHTML += `<span class = "question">${country_name}?</span>`;
-               	          document.querySelector('.refuse').onclick = function(e) {
-               	    	           modal.style.display = 'none';
-               	                }
-               	          document.querySelector('.admit').onclick = function (e) {
-   	                            localStorage.setItem('setCountry', country_name);
-   	                             modal.style.display = 'none';
-                	              }
-               	}) 
-            })
-            .catch(e => {console.log(new Error ('Look mistake in request'))})
+                admit.onclick = function() {
+                  localStorage.setItem('setCountry', country_name);
+                  modal.style.display = 'none';
+                }
+            })                  
+         })             
       }
-}
-	
-  getCountry();	  
-}
+    }
 
-  
-	
 
+   function serverRequest(endpoint, callback) {
+      fetch(endpoint)
+            .then(blob => blob.json())
+            .then(data => callback(data))
+   }
+
+
+    return {
+      getCountry: getCountry
+    }
+})();
+	
+  country.getCountry();	  
