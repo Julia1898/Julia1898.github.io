@@ -65,7 +65,7 @@ var rdShowItems = (function() {
 
 
 
-    submit.addEventListener('click', function () {  
+    submit.addEventListener('click', function () { 
         showItems(newDataNodes, selectionWrapper); 
     });
 
@@ -74,41 +74,34 @@ var rdShowItems = (function() {
         var amoutInputValue = +amountInput.value.split(' ').join('');
         var daysInputValue = +daysInput.value;
         var node = [].slice.call(nodes);
-
       
-        sortAmountValue();
-        sortDaysValue();
+        
+        sortValues('#rd-description__counter--amount #rd-secondAmount',amoutInputValue);
+        sortValues('#rd-description__counter--amount #rd-firstAmount',amoutInputValue,true);
+        sortValues('.rd-description__counter--term span',daysInputValue);
         sortPriority();
         getNodeList(node, parent);
 
 
-        function sortAmountValue() {
-            node = node.filter(function (x) {  
-                var value = x.querySelector('.rd-description__counter--amount span');
-                value = value.innerHTML;
-                value = value.split('-');
-                var minVal = value[0];
-                var maxVal = value[1];
-                minVal = minVal.split(' ').join('');
-                maxVal = maxVal.split(' ').join('');
-          
-                if (amoutInputValue >= minVal && amoutInputValue <= maxVal) {
-                    return true;
-                }
-            });          
-        }
 
 
-        function sortDaysValue() {
+        function sortValues(elem, compare, flag) {
           if (node.length == 0) return;
 
             node = node.filter(function (x) {
-                var value = x.querySelector('.rd-description__counter--term');
+                var value = x.querySelector(elem);
                 value = value.innerHTML;
-                value = value.match(/\d+/)[0];
+                value = value.split(' ').join('');
+               
 
-                if (daysInputValue <= value) {
-                    return true;
+                if (flag) {
+                    if (compare >= value) {
+                        return true;
+                    } 
+                } else {
+                    if (compare <= value) {
+                        return true;
+                    }
                 }
             });
         }
@@ -131,35 +124,34 @@ var rdShowItems = (function() {
 
 
         function getNodeList(node, parent) {
-            var parentElement = document.createElement('div');
             var message = '<p class="rd-messageNotFount">\u041F\u043E \u0432\u0430\u0448\u0435\u043C\u0443 \u0437\u0430\u043F\u0440\u043E\u0441\u0443 \u043F\u043E\u043A\u0430 \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u043E,</br> \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u0437\u0430\u043F\u0440\u043E\u0441\u0430</p>';
-
             var HTMLString = '';
-
-            while (parent.hasChildNodes()) {
-              parent.removeChild(parent.firstChild);
-            }
+            
 
             for (var element = 0; element < node.length; element++) {
                 HTMLString += node[element].outerHTML;
             }
             
             if (navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i) ){       
+                var parentElement = document.createElement('div');
+
+                while (parent.hasChildNodes()) {
+                       parent.removeChild(parent.firstChild);
+                }
+
                 if (HTMLString.length == 0) {
                     parent.appendChild(message);
                 } else {
                     parentElement.innerHTML = HTMLString;
                     parent.appendChild(parentElement);
                 } 
-            } else{
-                if (HTMLString.length == 0) {
+            } else {
+                if (HTMLString.length === 0) {
                     parent.innerHTML = message;
                 } else {
-                    parentElement.innerHTML = HTMLString;
-                    parent.innerHTML ='';
-                    parent.appendChild(parentElement);
+                    parent.innerHTML = HTMLString;
                 } 
-            }
+             }
                   
         }
 
