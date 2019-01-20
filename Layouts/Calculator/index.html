@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Калькулятор</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+  <body>
+ 	<div class="cl-mainContainer">
+ 		<div class="cl-calculatorWrapper">
+ 			<h2 class="cl-calculatorWrapper-title">Калькулятор переплаты</h2>
+ 			<div class ="cl-calculatorWrapper-inputs">
+ 				<div class="cl-calculatorWrapper-inputs__inputBlock">
+ 					<p class="cl-calculatorWrapper-inputs__nameOfInput">Сумма займа в рублях</p>
+ 					<input id = "cl-calculatorWrapper-input__1" type="text" class="cl-calculatorWrapper-inputs__input" size="20" name ="amount" maxlength="6">
+ 				</div>
+ 				<div class="cl-calculatorWrapper-inputs__inputBlock">
+ 					<p class="cl-calculatorWrapper-inputs__nameOfInput">Срок в днях</p>
+ 					<input type="text" id = "cl-calculatorWrapper-input__2" name="term" class="cl-calculatorWrapper-inputs__input" size="20" maxlength="3">
+ 				</div>
+ 			    <div class="cl-calculatorWrapper-inputs__inputBlock">
+ 					<p class="cl-calculatorWrapper-inputs__nameOfInput">Процент в день</p>
+ 					<input type="text" id = "cl-calculatorWrapper-input__3" name="percent" class="cl-calculatorWrapper-inputs__input" size="20" maxlength="10">
+ 				</div>						    
+ 			       <button class="cl-calculatorWrapper-inputs__button" >Рассчитать</button>			   
+ 			</div>
+ 			<div class="cl-calculatorWrapper-result" >
+ 				<p class="cl-calculatorWrapper-result__labelForResult">Переплата:</p>
+ 				<div class="cl-calculatorWrapper-result__outPutResult"></div>
+ 			</div>
+ 			<div class="cl-worningWindow">
+ 				<p class="cl-worningMassage"></p>
+ 				<span class="cl-closee">&times;</span>
+ 			</div>
+ 		</div>
+ 	</div>
+    <script type="text/javascript" src="dist/main.js"></script>  	
+  </body>
+</html>
